@@ -1,6 +1,8 @@
 import org.scalatest._
 import org.scalatest.flatspec.AnyFlatSpec
 
+
+// Example unit tests
 class CatsSpec extends AnyFlatSpec with Matchers {
 
   import cats._
@@ -12,4 +14,31 @@ class CatsSpec extends AnyFlatSpec with Matchers {
   }
 
 }
+
+
+// Example property-based tests
+import org.scalatest.prop._
+class MyPropertyTests extends AnyFlatSpec with Matchers with PropertyChecks {
+
+  import cats._
+  import cats.implicits._
+
+  "An Int" should "combine commutatively" in {
+    forAll { (a: Int, b: Int) =>
+      (a |+| b) should be (b |+| a)
+    }
+  }
+
+  it should "invert" in {
+    forAll { (a: Int) =>
+      (a |+| a.inverse) shouldBe Monoid[Int].empty
+    }
+  }
+
+}
+
+
+
+// eof
+
 
