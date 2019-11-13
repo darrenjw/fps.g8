@@ -16,8 +16,10 @@ libraryDependencies  ++= Seq(
   "org.scalactic" %% "scalactic" % "3.0.8",
   "org.typelevel" %% "cats-core" % "2.0.0",
   "org.typelevel" %% "cats-free" % "2.0.0",
+  "org.typelevel" %% "cats-laws" % "2.0.0",
   "org.typelevel" %% "cats-effect" % "2.0.0",
   "org.typelevel" %% "discipline-core" % "1.0.0",
+  "org.typelevel" %% "discipline-scalatest" % "1.0.0-RC1",
   "org.typelevel" %% "simulacrum" % "1.0.0"
 )
 
