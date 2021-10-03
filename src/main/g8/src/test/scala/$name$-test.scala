@@ -8,9 +8,9 @@ class CatsSpec extends AnyFlatSpec with Matchers {
   import cats._
   import cats.implicits._
 
- "A List" should "combine" in {
-   val l = List(1,2) |+| List(3,4)
-   l should be (List(1,2,3,4))
+  "A List" should "combine" in {
+    val l = List(1,2) |+| List(3,4)
+    l should be (List(1,2,3,4))
   }
 
 }
@@ -31,7 +31,7 @@ class MyPropertyTests extends AnyFlatSpec with Matchers with ScalaCheckPropertyC
 
   it should "invert" in {
     forAll { (a: Int) =>
-      (a |+| a.inverse) shouldBe Monoid[Int].empty
+      (a |+| a.inverse()) shouldBe Monoid[Int].empty
     }
   }
 
