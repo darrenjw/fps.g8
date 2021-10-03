@@ -26,8 +26,8 @@ libraryDependencies  ++= Seq(
 
 val monocleVersion = "3.0.0"
 libraryDependencies ++= Seq(
-  "com.github.julien-truffaut" %%  "monocle-core"  % monocleVersion,
-  "com.github.julien-truffaut" %%  "monocle-law"   % monocleVersion % "test"
+  "dev.optics" %%  "monocle-core"  % monocleVersion,
+  "dev.optics" %%  "monocle-law"   % monocleVersion % "test"
 )
 
 val circeVersion = "0.14.1"
