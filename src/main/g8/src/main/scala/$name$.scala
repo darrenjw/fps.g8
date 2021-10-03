@@ -3,14 +3,13 @@ $name$.scala
 Stub for Scala Cats code
 */
 
-object CatsApp {
+import cats.*
+import cats.implicits.*
+import cats.effect.{IO, IOApp}
 
-  import cats._
-  import cats.implicits._
+object CatsApp extends IOApp.Simple:
 
-  def main(args: Array[String]): Unit = {
-    val l = List(1,2) |+| List(3,4)
-    println(l)
-  }
+  val l = List(1,2) |+| List(3,4)
 
-}
+  def run = IO{ println(l) }
+
