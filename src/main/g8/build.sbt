@@ -6,32 +6,31 @@ version := "0.1-SNAPSHOT"
 
 scalacOptions ++= Seq(
   "-unchecked", "-deprecation", "-feature", "-language:higherKinds",
-  "-language:implicitConversions", "-Ypartial-unification"
+  "-language:implicitConversions", "-Ykind-projector:underscores"
 )
 
-addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.11.0" cross CrossVersion.full)
-addCompilerPlugin("org.scalamacros" %% "paradise" % "2.1.1" cross CrossVersion.full)
+enablePlugins(MdocPlugin)
 
 libraryDependencies  ++= Seq(
-  "org.scalatest" %% "scalatest" % "3.0.8" % "test",
-  "org.scalactic" %% "scalactic" % "3.0.8",
-  "org.typelevel" %% "cats-core" % "2.0.0",
-  "org.typelevel" %% "cats-free" % "2.0.0",
-  "org.typelevel" %% "cats-laws" % "2.0.0",
-  "org.typelevel" %% "cats-effect" % "2.0.0",
-  "org.typelevel" %% "discipline-core" % "1.0.0",
-  "org.typelevel" %% "discipline-scalatest" % "1.0.0-RC1",
-  "org.typelevel" %% "simulacrum" % "1.0.0"
+  "org.scalatest" %% "scalatest" % "3.2.9" % "test",
+  "org.scalactic" %% "scalactic" % "3.2.9" % "test",
+  "org.scalatest" %% "scalatest-propspec" % "3.2.9" % "test",
+  "org.scalatestplus" %% "scalacheck-1-15" % "3.2.9.0" % "test",
+  "org.typelevel" %% "cats-core" % "2.6.1",
+  "org.typelevel" %% "cats-free" % "2.6.1",
+  "org.typelevel" %% "cats-laws" % "2.6.1",
+  "org.typelevel" %% "cats-effect" % "3.2.2",
+  "org.typelevel" %% "discipline-core" % "1.1.5",
+  "org.typelevel" %% "discipline-scalatest" % "2.1.5"
 )
 
-val monocleVersion = "2.0.0"
+val monocleVersion = "3.0.0"
 libraryDependencies ++= Seq(
   "com.github.julien-truffaut" %%  "monocle-core"  % monocleVersion,
-  "com.github.julien-truffaut" %%  "monocle-macro" % monocleVersion,
   "com.github.julien-truffaut" %%  "monocle-law"   % monocleVersion % "test"
 )
 
-val circeVersion = "0.12.1"
+val circeVersion = "0.14.1"
 libraryDependencies ++= Seq(
   "io.circe" %% "circe-core",
   "io.circe" %% "circe-generic",
@@ -46,7 +45,7 @@ resolvers ++= Seq(
     "https://oss.sonatype.org/content/repositories/releases/"
 )
 
-scalaVersion := "2.12.10"
+scalaVersion := "3.0.1"
 
 
 // eof
