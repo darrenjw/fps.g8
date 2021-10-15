@@ -1,6 +1,6 @@
 A [Giter8](http://www.foundweekends.org/giter8/) template for FP in Scala with Cats and other Typelevel libraries
 
-* Scala 2.12.8, Sbt 1.3.2, Cats 2.0.0, Simulacrum 1.0.0, Monocle 2.0.0, Discipline 1.0.0, ScalaTest 3.0.8.
+* Scala 3.0.1, Sbt 1.5.1, Cats 2.6.1, Cats Effect 3.2.2, Monocle 3.0.0, Discipline 1.1.5, Munit 0.7.29.
 
 ```bash
 sbt new darrenjw/fps.g8
@@ -8,7 +8,7 @@ sbt new darrenjw/fps.g8
 
 Template license
 ----------------
-Written in 2019 by Darren Wilkinson darrenjwilkinson@btinternet.com
+Written by Darren Wilkinson darrenjwilkinson@btinternet.com
 
 To the extent possible under law, the author(s) have dedicated all copyright and related
 and neighboring rights to this template to the public domain worldwide.
