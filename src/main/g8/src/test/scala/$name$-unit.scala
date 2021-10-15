@@ -1,17 +1,15 @@
-import org.scalatest.flatspec.AnyFlatSpec
-import org.scalatest.matchers.should.Matchers
-
 import cats.*
 import cats.implicits.*
 
+import munit.*
+
 // Example unit tests
-class MyUnitTests extends AnyFlatSpec with Matchers:
+class MyUnitTests extends FunSuite:
 
-  "A List" should "combine" in {
+  test("A List should combine") {
     val l = List(1,2) |+| List(3,4)
-    l should be (List(1,2,3,4))
+    assert(l === List(1,2,3,4))
   }
-
 
 
 // eof

@@ -12,16 +12,13 @@ scalacOptions ++= Seq(
 enablePlugins(MdocPlugin)
 
 libraryDependencies  ++= Seq(
-  "org.scalatest" %% "scalatest" % "3.2.9" % "test",
-  "org.scalactic" %% "scalactic" % "3.2.9" % "test",
-  "org.scalatest" %% "scalatest-propspec" % "3.2.9" % "test",
-  "org.scalatestplus" %% "scalacheck-1-15" % "3.2.9.0" % "test",
+  "org.scalameta" %% "munit" % "0.7.29" % Test,
+  "org.scalameta" %% "munit-scalacheck" % "0.7.29" % Test,
   "org.typelevel" %% "cats-core" % "2.6.1",
   "org.typelevel" %% "cats-free" % "2.6.1",
   "org.typelevel" %% "cats-laws" % "2.6.1",
   "org.typelevel" %% "cats-effect" % "3.2.2",
-  "org.typelevel" %% "discipline-core" % "1.1.5",
-  "org.typelevel" %% "discipline-scalatest" % "2.1.5"
+  "org.typelevel" %% "discipline-core" % "1.1.5"
 )
 
 val monocleVersion = "3.0.0"

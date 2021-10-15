@@ -1,23 +1,22 @@
-import org.scalatest.flatspec.AnyFlatSpec
-import org.scalatest.matchers.should.Matchers
-import org.scalatestplus.scalacheck.*
+import munit.ScalaCheckSuite
+import org.scalacheck.Prop.*
 
 import cats.*
 import cats.implicits.*
 
 // Example property-based tests
 
-class MyPropertyTests extends AnyFlatSpec with Matchers with ScalaCheckPropertyChecks:
+class MyPropertyTests extends ScalaCheckSuite:
 
-  "An Int" should "combine commutatively" in {
+  property("An Int should combine commutatively") {
     forAll { (a: Int, b: Int) =>
-      (a |+| b) should be (b |+| a)
+      (a |+| b) == (b |+| a)
     }
   }
 
-  it should "invert" in {
+  property("An Int should invert") {
     forAll { (a: Int) =>
-      (a |+| a.inverse()) shouldBe Monoid[Int].empty
+      (a |+| a.inverse()) == Monoid[Int].empty
     }
   }
 
