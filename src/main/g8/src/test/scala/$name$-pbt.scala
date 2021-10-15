@@ -10,13 +10,13 @@ class MyPropertyTests extends ScalaCheckSuite:
 
   property("An Int should combine commutatively") {
     forAll { (a: Int, b: Int) =>
-      (a |+| b) == (b |+| a)
+      assertEquals(a |+| b, b |+| a)
     }
   }
 
   property("An Int should invert") {
     forAll { (a: Int) =>
-      (a |+| a.inverse()) == Monoid[Int].empty
+      assertEquals(a |+| a.inverse(), Monoid[Int].empty)
     }
   }
 
