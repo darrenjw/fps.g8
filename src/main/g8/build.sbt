@@ -45,6 +45,7 @@ resolvers ++= Seq(
 
 scalaVersion := "3.1.2"
 
+fork := true
 
 // eof
 
