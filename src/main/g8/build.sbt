@@ -12,23 +12,23 @@ scalacOptions ++= Seq(
 enablePlugins(MdocPlugin)
 
 libraryDependencies  ++= Seq(
-  "org.scalameta" %% "munit" % "0.7.29" % Test,
-  "org.scalameta" %% "munit-scalacheck" % "0.7.29" % Test,
-  "org.typelevel" %% "discipline-munit" % "1.0.9" % Test,
-  "org.typelevel" %% "cats-core" % "2.9.0",
-  "org.typelevel" %% "cats-free" % "2.9.0",
-  "org.typelevel" %% "cats-laws" % "2.9.0",
-  "org.typelevel" %% "cats-effect" % "3.5.0",
-  "org.typelevel" %% "discipline-core" % "1.5.0"
+  "org.scalameta" %% "munit" % "1.0.0" % Test,
+  "org.scalameta" %% "munit-scalacheck" % "1.0.0" % Test,
+  "org.typelevel" %% "discipline-munit" % "2.0.0" % Test,
+  "org.typelevel" %% "cats-core" % "2.12.0",
+  "org.typelevel" %% "cats-free" % "2.12.0",
+  "org.typelevel" %% "cats-laws" % "2.12.0",
+  "org.typelevel" %% "cats-effect" % "3.5.4",
+  "org.typelevel" %% "discipline-core" % "1.7.0"
 )
 
-val monocleVersion = "3.1.0"
+val monocleVersion = "3.2.0"
 libraryDependencies ++= Seq(
   "dev.optics" %%  "monocle-core"  % monocleVersion,
   "dev.optics" %%  "monocle-law"   % monocleVersion % "test"
 )
 
-val circeVersion = "0.14.1"
+val circeVersion = "0.14.9"
 libraryDependencies ++= Seq(
   "io.circe" %% "circe-core",
   "io.circe" %% "circe-generic",
@@ -43,7 +43,7 @@ resolvers ++= Seq(
     "https://oss.sonatype.org/content/repositories/releases/"
 )
 
-scalaVersion := "3.3.0"
+scalaVersion := "3.3.3"
 
 fork := true
 
